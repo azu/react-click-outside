@@ -20,6 +20,9 @@ export default class ClickOutside extends Component {
   }
 
   handle = e => {
+    if (e.target.classList.contains("stopPropagation")){
+      return;
+    }
     const { onClickOutside } = this.props
     const el = this.container
     if (!el.contains(e.target)) onClickOutside(e)

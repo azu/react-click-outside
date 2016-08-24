@@ -24,6 +24,8 @@ class Menu extends Component {
         <a href="#" onClick={::this.toggle}>Menu</a>
         {open ? items : null}
       </ClickOutside>
+
+      <a href="#" onClick={::this.toggle} className="stopPropagation">Outer Menu</a>
     </div>
   }
 
