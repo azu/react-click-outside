@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react'
 
 export default class ClickOutside extends Component {
   static propTypes = {
-    ignoreName: PropTypes.func,
+    ignoreClassName: PropTypes.string,
     onClickOutside: PropTypes.func.isRequired
   };
 
@@ -21,7 +21,7 @@ export default class ClickOutside extends Component {
   }
 
   handle = e => {
-    if (this.props.ignoreName && e.target.classList.contains(this.props.ignoreName)){
+    if (this.props.ignoreClassName && e.target.classList.contains(this.props.ignoreClassName)){
       return;
     }
     const { onClickOutside } = this.props

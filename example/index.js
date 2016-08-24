@@ -22,7 +22,7 @@ class Menu extends Component {
     return <div className="Menu">
       <ClickOutside
           onClickOutside={::this.hide}
-          ignoreName="stopPropagation">
+          ignoreClassName="stopPropagation">
         <a href="#" onClick={::this.toggle}>Menu</a>
         {open ? items : null}
       </ClickOutside>
